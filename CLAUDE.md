@@ -17,6 +17,12 @@ yarn build
 
 # Start the server (after building)
 yarn start
+
+# Run tests
+yarn test             # Run main tests
+yarn test:apikey      # Run API key validation test
+yarn test:all         # Run all tests
+yarn test:coverage    # Run tests with coverage report
 ```
 
 ## Architecture

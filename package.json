@@ -4,16 +4,33 @@
   "description": "MCP server for Evernote integration",
   "main": "index.js",
   "type": "module",
+  "license": "MIT",
+  "keywords": ["mcp", "evernote", "notes", "claude", "ai"],
+  "author": "Evernote MCP Server Contributors",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/evernote-mcp-server.git"
+  },
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --testPathIgnorePatterns=index.apikey.test.ts",
+    "test:apikey": "NODE_OPTIONS='--experimental-vm-modules' jest index.apikey.test.ts",
+    "test:all": "NODE_OPTIONS='--experimental-vm-modules' jest",
+    "test:watch": "NODE_OPTIONS='--experimental-vm-modules' jest --watch",
+    "test:coverage": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^0.5.0",
     "axios": "^1.6.0"
   },
   "devDependencies": {
+    "@types/axios-mock-adapter": "^1.10.4",
+    "@types/jest": "^29.5.14",
     "@types/node": "^20.0.0",
+    "axios-mock-adapter": "^2.1.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.4",
     "typescript": "^5.0.0"
   }
 }
